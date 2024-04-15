@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
   - enabled: 0
-    path: Assets/Scenes/UXTesting.unity
+    path: Assets/myAssets/Scenes/UXTesting.unity
     guid: 920e653271bcf4e43962f2e264a8b8cd
   - enabled: 1
-    path: Assets/Scenes/BRHTmainScene.unity
+    path: Assets/myAssets/Scenes/BRHTmainScene.unity
     guid: 79ebc96d8919b8142a042551c07a0693
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
