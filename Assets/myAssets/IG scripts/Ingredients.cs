@@ -5,11 +5,15 @@ using UnityEngine.UI;
 public class Ingredients : MonoBehaviour
 {
     private bool oneIsThere = false;
-    private bool twoIsThere = false;
+    public static bool twoIsThere = false;
+    public static bool threeIsThere = false;
+    public static bool fourIsThere = false;
     public static bool ingredients = false;
     public static bool pestleIsThere = false;
     public static string colorA; // Store the colors of colliding objects
     public static string colorB;
+    public static string colorC;
+    public static string colorD;
 
     public Text HUD;
     private void Start()
@@ -18,7 +22,8 @@ public class Ingredients : MonoBehaviour
     }
     void Update()
     {
-        if (oneIsThere && twoIsThere && pestleIsThere)
+       // if (oneIsThere && twoIsThere && pestleIsThere)
+       if(oneIsThere && pestleIsThere)
         {
             ingredients = true;
             HUD.text = "ingredients true";
@@ -31,7 +36,8 @@ public class Ingredients : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("red") || other.CompareTag("blue") || other.CompareTag("yellow") || other.CompareTag("Untagged"))
+        //if (other.CompareTag("red") || other.CompareTag("blue") || other.CompareTag("yellow") || other.CompareTag("Untagged"))
+        if(!other.CompareTag("Untagged"))
         {
             if (colorA == null)
             {
@@ -46,6 +52,16 @@ public class Ingredients : MonoBehaviour
                 twoIsThere = true;
                 //HUD.text = "colorB" + colorB;
                // HUD.text = "colorB";
+            }
+            else if (colorC == null && other.tag != colorA && other.tag != colorB)
+            {
+                colorC = other.tag; // Assign the second color if different from the first
+                threeIsThere = true;
+            }
+            else if (colorD == null && other.tag != colorA && other.tag != colorB && other.tag != colorC)
+            {
+                colorD = other.tag; // Assign the second color if different from the first
+                //threeIsThere = true;
             }
         }
         if (other.CompareTag("pestle"))
@@ -72,6 +88,16 @@ public class Ingredients : MonoBehaviour
                 twoIsThere = false;
                 // Reset colorB if the object leaving was colorB
                 //HUD.text = "colorB null";
+            }
+            else if (other.tag == colorC)
+            {
+                colorC = null;
+              
+            }
+            else if (other.tag == colorD)
+            {
+                colorD = null;
+          
             }
         }
         if (other.CompareTag("pestle"))
