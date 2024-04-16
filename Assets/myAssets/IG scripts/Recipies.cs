@@ -46,7 +46,7 @@ public class Recipies : MonoBehaviour
             cube1 = GameObject.FindWithTag("red");
             cube2 = GameObject.FindWithTag("yellow");
             cube3 = GameObject.FindWithTag("blue");
-            StartParticleSystem();
+            //StartParticleSystem();
             respawnGame();
         }
     }
