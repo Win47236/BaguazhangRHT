@@ -23,7 +23,7 @@ public class Recipies : MonoBehaviour
     public Transform blueCube;
     public Transform yellowCube;
 
-    public GameObject particlePrefab;
+    //public GameObject particlePrefab;
     private GameObject currentParticles;
     public float playDuration = 2.0f; //this is where you can change how long the particle system plays for (measured in seconds)
 
@@ -74,7 +74,7 @@ public class Recipies : MonoBehaviour
         /* Ingredients.colorA = "";
          Ingredients.colorB = "";*/
         Ingredients.ingredients = false;
-        //HUD.text = "Ingredients bool reset" + Ingredients.ingredients; 
+        HUD.text = "Ingredients bool reset" + Ingredients.ingredients; 
         Ingredients.colorA = null;
         Ingredients.colorB = null;
     }
@@ -95,32 +95,32 @@ public class Recipies : MonoBehaviour
             case "red_yellow":
                 Instantiate(potion1, potionSpawn.position, potionSpawn.rotation);
                // potionSpawned = false;
-                //HUD.text = "Red_Yellow = orange";
+                HUD.text = "Red_Yellow = orange";
                 break;
             case "yellow_red":
                 Instantiate(potion1, potionSpawn.position, potionSpawn.rotation);
                 // potionSpawned = false;
-                //HUD.text = "Red_Yellow = orange";
+                HUD.text = "Red_Yellow = orange";
                 break;
             case "red_blue":
                 Instantiate(potion2, potionSpawn.position, potionSpawn.rotation);
                // potionSpawned = false;
-               // HUD.text = "Red_Blue = purple";
+               HUD.text = "Red_Blue = purple";
                 break;
             case "blue_red":
                 Instantiate(potion2, potionSpawn.position, potionSpawn.rotation);
                 // potionSpawned = false;
-                //HUD.text = "Red_Yellow = orange";
+                HUD.text = "Red_Yellow = orange";
                 break;
             case "yellow_blue":
                 Instantiate(potion3, potionSpawn.position, potionSpawn.rotation);
                 //potionSpawned = false;
-               //HUD.text = "Yellow_Blue = green";
+               HUD.text = "Yellow_Blue = green";
                 break;
             case "blue_yellow":
                 Instantiate(potion3, potionSpawn.position, potionSpawn.rotation);
                 // potionSpawned = false;
-                //HUD.text = "Red_Yellow = orange";
+                HUD.text = "Red_Yellow = orange";
                 break;
             default:
                 Instantiate(potion4, potionSpawn.position, potionSpawn.rotation);

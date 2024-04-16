@@ -12,12 +12,16 @@ public class Ingredients : MonoBehaviour
     public static string colorB;
 
     public Text HUD;
+    private void Start()
+    {
+        HUD.text = "ingredients searching";
+    }
     void Update()
     {
         if (oneIsThere && twoIsThere && pestleIsThere)
         {
             ingredients = true;
-            //HUD.text = "ingredients true";
+            HUD.text = "ingredients true";
         }
         else
         {
