@@ -7686,7 +7686,7 @@ GameObject:
   - component: {fileID: 2164808620185865270}
   - component: {fileID: 5286989016901179884}
   - component: {fileID: 5286989016901179885}
-  - component: {fileID: 5286989016901179887}
+  - component: {fileID: 5286989016901179886}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -8488,12 +8488,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 5286989016901179886}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2147483648
   m_DistanceCalculationMode: 1
   m_SelectMode: 1
   m_FocusMode: 1
@@ -8586,8 +8587,8 @@ MonoBehaviour:
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
---- !u!65 &5286989016901179887
-BoxCollider:
+--- !u!64 &5286989016901179886
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8604,9 +8605,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.010000003, y: 0.0100000035, z: 0.01}
-  m_Center: {x: -0.0000000010031727, y: 1.601691e-12, z: -0.000000004656613}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7513297493162946847, guid: dd362783110cf9d4da3a0def704ef38c, type: 3}
 --- !u!33 &5804824037023534304
 MeshFilter:
   m_ObjectHideFlags: 0
