@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class Recipies : MonoBehaviour
 {
-    public GameObject ingredient1;
-    public GameObject ingredient2;
-    public GameObject ingredient3;
+ //   public GameObject ingredient1;
+   // public GameObject ingredient2;
+   // public GameObject ingredient3;
 
-    public GameObject cube1;
-    public GameObject cube2;
-    public GameObject cube3;
+    private GameObject cube1;
+    private GameObject cube2;
+    private GameObject cube3;
 
     public GameObject potion1;
     public GameObject potion2;
@@ -72,9 +72,9 @@ public class Recipies : MonoBehaviour
         Destroy(cube1);
         Destroy(cube2);
         Destroy(cube3);
-        Instantiate(ingredient1, redCube.position, redCube.rotation);
-        Instantiate(ingredient2, blueCube.position, blueCube.rotation);
-        Instantiate(ingredient3, yellowCube.position, yellowCube.rotation);
+       // Instantiate(ingredient1, redCube.position, redCube.rotation);
+        //Instantiate(ingredient2, blueCube.position, blueCube.rotation);
+        //Instantiate(ingredient3, yellowCube.position, yellowCube.rotation);
     }
 
     public void resetIngredientsScript()
@@ -97,7 +97,7 @@ public class Recipies : MonoBehaviour
     }
     private void CheckColors()
     {
-        if(Ingredients.twoIsThere)
+      /*  if(Ingredients.twoIsThere)
         {
             //script prepped for expansion w/ two ingredient recipies
             string combination2 = Ingredients.colorA + "_" + Ingredients.colorB;
@@ -112,7 +112,7 @@ public class Recipies : MonoBehaviour
             Instantiate(potion7, potionSpawn.position, potionSpawn.rotation);
 
             PlayerHealth.CurrentHealth -= 5;
-        }
+        } */
         if (Ingredients.threeIsThere)
         {
             string combination3 = Ingredients.colorA + "_" + Ingredients.colorB + "_" + Ingredients.colorC;
@@ -228,13 +228,6 @@ public class Recipies : MonoBehaviour
                     break;
             }
         }
-        else
-        {
-            Instantiate(potion7, potionSpawn.position, potionSpawn.rotation);
-
-            PlayerHealth.CurrentHealth -= 5;
-        }
-        
     }
 
     /*public void StartParticleSystem()

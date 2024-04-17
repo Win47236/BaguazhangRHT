@@ -26,6 +26,7 @@ public class Mixing : MonoBehaviour
         if (Count >= 24)
         {
             Mixed = true;
+          //  HUD.text = "mixed!";
         }
 
         else if (Recipies.ClearOrder)

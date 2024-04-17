@@ -18,15 +18,16 @@ public class Ingredients : MonoBehaviour
     public Text HUD;
     private void Start()
     {
-        HUD.text = "ingredients searching";
+      //  HUD.text = "ingredients searching";
     }
     void Update()
     {
        // if (oneIsThere && twoIsThere && pestleIsThere)
-       if(oneIsThere && pestleIsThere)
+       if(oneIsThere && twoIsThere && threeIsThere && pestleIsThere)
         {
             ingredients = true;
-            HUD.text = "ingredients true";
+            //HUD.text = "ingredients true";
+           // HUD.text = colorA + colorB + colorC;
         }
         else
         {
@@ -36,8 +37,9 @@ public class Ingredients : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.CompareTag("red") || other.CompareTag("blue") || other.CompareTag("yellow") || other.CompareTag("Untagged"))
-        if(!other.CompareTag("Untagged"))
+        if (other.CompareTag("birdFlower") || other.CompareTag("birdLeaf") || other.CompareTag("orchidFlower") 
+            || other.CompareTag("orchidLeaf") || other.CompareTag("tulipFlower") || other.CompareTag("tulipLeaf"))
+        
         {
             if (colorA == null)
             {
@@ -73,7 +75,8 @@ public class Ingredients : MonoBehaviour
 
    private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("red") || other.CompareTag("blue") || other.CompareTag("yellow")||other.CompareTag("Untagged"))
+        if (other.CompareTag("birdFlower") || other.CompareTag("birdLeaf") || other.CompareTag("orchidFlower")
+             || other.CompareTag("orchidLeaf") || other.CompareTag("tulipFlower") || other.CompareTag("tulipLeaf"))
         {
             if (other.tag == colorA)
             {
@@ -92,6 +95,7 @@ public class Ingredients : MonoBehaviour
             else if (other.tag == colorC)
             {
                 colorC = null;
+                threeIsThere = false;
               
             }
             else if (other.tag == colorD)

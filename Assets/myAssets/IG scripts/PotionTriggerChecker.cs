@@ -9,9 +9,9 @@ public class PotionTriggerChecker : MonoBehaviour
     public Collider expectedTrigger3;
 
     // Potion tags to check for
-    public string correctPotion1 = "Potion1";
-    public string correctPotion2 = "Potion2";
-    public string correctPotion3 = "Potion3";
+    private string correctPotion1 = "Potion3";
+    private string correctPotion2 = "Potion1";
+    private string correctPotion3 = "Potion4";
 
     // Internal state
     private bool potion1Correct = false;
